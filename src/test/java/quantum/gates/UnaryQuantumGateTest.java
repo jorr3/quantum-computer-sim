@@ -8,9 +8,8 @@ import quantum.gates.unary.*;
 import quantum.math.ComplexNumber;
 import quantum.math.Vector;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static utils.stateParser.parseState;
-import static utils.stateParser.stateFromStr;
+import static utils.StateParser.parseState;
+import static utils.StateParser.stateFromStr;
 
 import java.util.function.Function;
 import java.util.stream.Stream;

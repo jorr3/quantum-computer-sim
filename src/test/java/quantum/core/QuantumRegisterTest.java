@@ -40,7 +40,7 @@ public class QuantumRegisterTest {
         register.applyGate(hadamardGate, 0);
 
         MeasurementResult result = register.measure(0);
-        assertTrue(result.result() == 0 || result.result() == 1, "Measurement result should be 0 or 1.");
+        assertTrue(result.value() == 0 || result.value() == 1, "Measurement value should be 0 or 1.");
     }
 
     @Test
@@ -49,7 +49,7 @@ public class QuantumRegisterTest {
         IQuantumGate hadamardGate = new HadamardGate();
         register.applyGate(hadamardGate, 0);
 
-        int result = register.measure(0).result();
+        int result = register.measure(0).value();
         double expectedProbability = result == 0 ? 1.0 : 0.0;
         assertEquals(expectedProbability, register.getProbabilityOfZero(register.getQubit(0)),
                 "Probability should collapse to 1.0 or 0.0 post measurement.");

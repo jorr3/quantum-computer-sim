@@ -10,9 +10,8 @@ import quantum.gates.unary.IdentityGate;
 import quantum.gates.unary.PauliXGate;
 import quantum.math.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static utils.stateParser.parseState;
-import static utils.stateParser.stateFromStr;
+import static utils.StateParser.parseState;
+import static utils.StateParser.stateFromStr;
 
 import java.util.stream.Stream;
 

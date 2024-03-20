@@ -39,6 +39,6 @@ public class DeutschJosza {
 
         return circuit.getMeasurementResults().stream()
                 .limit(oracleInputSize - 1)
-                .allMatch(result -> result.result() == 0);
+                .allMatch(result -> result.value() == 0);
     }
 }
