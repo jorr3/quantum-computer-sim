@@ -1,4 +1,4 @@
-# Quantum Simulation Library
+# Quantum Computer Simulation Library
 
 This library provides a simulation framework for quantum computing, enabling users to create and manipulate quantum registers, apply quantum gates, perform measurements, and construct quantum circuits.
 
