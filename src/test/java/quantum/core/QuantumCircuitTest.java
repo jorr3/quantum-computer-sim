@@ -25,7 +25,7 @@ public class QuantumCircuitTest {
         circuit.execute();
 
         MeasurementResult result = circuit.getMeasurementResults().get(0);
-        assertEquals(0, result.result());
+        assertEquals(0, result.value());
     }
 
     @Test
@@ -41,7 +41,7 @@ public class QuantumCircuitTest {
         circuit.execute();
 
         List<MeasurementResult> results = circuit.getMeasurementResults();
-        assertEquals(results.get(0).result(), results.get(1).result());
+        assertEquals(results.get(0).value(), results.get(1).value());
     }
 
     @Test
@@ -54,6 +54,6 @@ public class QuantumCircuitTest {
         circuit.execute();
 
         MeasurementResult result = circuit.getMeasurementResults().get(0);
-        assertEquals(0, result.result());
+        assertEquals(0, result.value());
     }
 }

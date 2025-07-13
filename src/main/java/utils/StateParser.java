@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class stateParser {
+public class StateParser {
     public static String parseState(Vector state, int numQubits) {
         StringBuilder result = new StringBuilder();
         ComplexNumber[] elements = state.getElements();

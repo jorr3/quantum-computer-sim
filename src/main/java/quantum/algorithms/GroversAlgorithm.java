@@ -21,15 +21,14 @@ public class GroversAlgorithm {
         int iterations = (int) Math.ceil(Math.sqrt(Math.pow(2, n)));
         for (int i = 0; i < iterations; i++) {
             // Apply Oracle
-            circuit.addGate(oracle); // Assuming oracle is designed for all qubits
+            circuit.addGate(oracle);
 
             // Grover's Diffuser
             for (int j = 0; j < n; j++) {
                 circuit.addGate(new HadamardGate(), j);
                 circuit.addGate(new PauliXGate(), j);
             }
-            // Apply Controlled-Z (or equivalent) here
-            // Reapply Pauli-X and Hadamard
+
             for (int j = 0; j < n; j++) {
                 circuit.addGate(new PauliXGate(), j);
                 circuit.addGate(new HadamardGate(), j);
@@ -42,8 +41,13 @@ public class GroversAlgorithm {
         }
 
         circuit.execute();
-        // Convert measurement results to integer index
         List<MeasurementResult> results = circuit.getMeasurementResults();
-        return 0;
+
+        int solution = 0;
+        for (MeasurementResult result : results) {
+            solution |= (result.value() << result.qubitId());
+        }
+
+        return solution;
     }
 }

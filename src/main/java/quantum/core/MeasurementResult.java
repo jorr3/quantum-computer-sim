@@ -1,11 +1,11 @@
 package quantum.core;
 
-public record MeasurementResult(int qubitId, int result) {
+public record MeasurementResult(int qubitId, int value) {
     @Override
     public String toString() {
         return "MeasurementResult{" +
                 "qubitId=" + qubitId +
-                ", result=" + result +
+                ", value=" + value +
                 '}';
     }
 }
