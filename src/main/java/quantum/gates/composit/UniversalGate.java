@@ -24,7 +24,6 @@ public class UniversalGate extends QuantumGate {
             throw new IllegalArgumentException("UniversalGate requires exactly one input qubit.");
         }
 
-        // Apply the sequence of rotation gates
         RZGate rzGatePhi = new RZGate(phi);
         RYGate ryGateTheta = new RYGate(theta);
         RZGate rzGateLambda = new RZGate(lambda);
