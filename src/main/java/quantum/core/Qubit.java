@@ -1,8 +1,5 @@
 package quantum.core;
 
-/**
- * Represents a qubit within a quantum register.
- */
 public class Qubit {
     private final int id;
     private int index;
